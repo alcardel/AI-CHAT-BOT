@@ -4,10 +4,14 @@ from typing import Optional
 
 import openai
 
-with open('hidden.txt') as file:
-    openai.api_key = file.read()
+ openai.api_key = 'YOUR API KEY'
 
+#consider the API key from chatgpt 
 
+#with open('hidden.txt') as file:
+  #  openai.api_key = file.read()
+
+#The hidden text has the API key 
 
 def get_api_response(prompt: str) -> Optional[str]:
     text: str | None = None
