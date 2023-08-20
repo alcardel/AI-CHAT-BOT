@@ -21,10 +21,10 @@ def get_api_response(prompt: str) -> Optional[str]:
             model='text-davinci-003',
             prompt=prompt,
             temperature=0.9,
-            max_tokens=150,
+            max_tokens=190,
             top_p=1,
             frequency_penalty=0,
-            presence_penalty=0.6,
+            presence_penalty=0.3,
             stop=[' Human:', ' AI:']
         )
 
@@ -64,8 +64,8 @@ def get_bot_response(message: str, pl: list[str]) -> str:
 
 def main():
     prompt_list: list[str] = ['You are a bot and will answer as a bot',
-                              '\nHuman: What time is it?',
-                              '\nAI: I have no idea, I\'m a bot']
+                              'Human: What time is it?',
+                              'AI: I have no idea, I\'m a bot']
 
     while True:
         user_input: str = input('You: ')
